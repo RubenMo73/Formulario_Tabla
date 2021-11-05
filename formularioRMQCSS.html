@@ -1,0 +1,57 @@
+<DOCTYPE htmL>
+<html>
+<head>
+    <title>Formulario en tabla</title>
+    <style>td {background-color:lightcyan;} th{background-color: lightyellow;}
+            label{color: red;}
+            .submit{color: green;}
+            .botones{color: blue;}
+    </style>
+</head>
+<body>
+    <form method="POST" action="http://formadorestic.com/alumnosasir2/procesaformulario_usuario.php">
+        <table border=10>
+            <tr>
+                <th colspan=2><h2 style="color: indianred;">User Form</h2></th>
+            </tr>
+            <tr>
+                <td><label for="nombre">Enter your name</label></td>
+                <td><input type="text" id="nombre" name="nombre" placeholder="Type your name">
+            </tr>
+            <tr>
+                <td><label for="password">Enter your password</label></td>
+                <td><input type="password" id="password" name="password" placeholder="Type a password">
+            </tr>
+            <tr>
+                <td><label for="direccion">Enter your address<label></td>
+                <td><textarea id="direccion" name="direccion" placeholder="Enter your address"></textarea>
+            </tr>
+            <tr>
+                <td>Select game</td>
+                <td><input type="checkbox" id="Hockey" name="deportes[]" value="hockey"><label for="Hockey">Hockey</label><br>
+                    <input type="checkbox" id="Football" name="deportes[]" value="football"><label for="Football">Football</label><br>
+                    <input type="checkbox" id="Badminton" name="deportes[]" value="badminton"><label for="Badminton">Badminton</label><br>
+                    <input type="checkbox" id="Cricket" name="deportes[]" value="cricket"><label for="Cricket">Cricket</label><br>
+                    <input type="checkbox" id="Volleyball" name="deportes[]" value="volleyball"><label for="Volleyball">Volleyball</label><br>
+                </td>              
+            <tr>            
+                <td>Gender</td>
+                <td><input type="radio" id="Male" name="sexo" value="male"><label for="Male">Male
+                    <input type="radio" id="Female" name="sexo" value="female"><label for="Female"> Female
+            </tr>
+            <tr>
+                <td><label for="combo_edad">Select your age</label></td>            
+                <td><select name="edad" id="combo_edad">
+                      <option value="18">18</option>
+                      <option value="19">19</option>
+                      <option value="mayor de 19">Mayor de 19</option>
+                    </select>  
+                </td>
+            <tr>
+                <td colspan=2><input type="file" id="Examinar..." name="Examinar..."></td>
+            </tr>
+            <tr>
+                <td colspan=2><input type="reset" name="Restablecer" class="botones"><input type="submit" value="Submit form" class="submit"><input type="button" value="Click me" class="botones"></td>
+            </tr>
+</body>
+</html>
